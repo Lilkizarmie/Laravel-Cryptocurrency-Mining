@@ -1,0 +1,126 @@
+/*------------- #VARIABLES --------------*/
+
+
+// We use these as default colors throughout
+
+$primary-color: #d30b97 !default;
+$secondary-color: #fff !default;
+$heading-color: $secondary-color !default;
+$link-color: #c3c9d4 !default;
+
+
+$white-color: #fff !default;
+$border-color: #3d434f !default;
+
+
+$h1-fontsize: 100px !default;
+$h2-fontsize: 60px !default;
+$h3-fontsize: 40px !default;
+$h4-fontsize: 30px !default;
+$h5-fontsize: 26px !default;
+$h6-fontsize: 22px !default;
+$h2-font-weight: 400 !default;
+$h-font-weight: 700 !default;
+$h-margin: .4em 0 !default;
+$heading-font-family: 'Comfortaa', Arial, 'Helvetica Neue', Helvetica, sans-serif, !default;
+$p-font-size: 16px !default;
+
+$h-letter-spacing: -.02em;
+
+// We use these to control various global styles
+
+$body-bg-color: #16181d !default;
+$body-font-size: 16px !default;
+$body-font-color: #a1abbd !default;
+$body-font-family: 'Comfortaa', Arial, 'Helvetica Neue', Helvetica, serif, sans-serif, !default;
+$body-font-weight: 400 !default;
+$body-letter-spacing: -.001em !default;
+$base-line-height: 1.63 !default;
+
+$weight-black: 900 !default;
+
+
+$icon-color: #666d7a !default;
+
+$black: #0e0f12 !default;
+$black-light: #141519 !default;
+$black-lighter: #16181d !default;
+$dark: #1c1f24 !default;
+$dark-light: #1e2027 !default;
+$dark-lighter: #22252c !default;
+$yellow-light: #ffb900 !default;
+$yellow-lighter: #daa001 !default;
+$orange: #da6e01 !default;
+$red: #fe3235 !default;
+$red-light: #ff3133 !default;
+$green: #008543 !default;
+$green-light: #00a654 !default;
+$green-lighter: #8ec545 !default;
+$blue: #3235aa !default;
+$blue-light: #3452ff !default;
+$blue-lighter: #016cb0 !default;
+$brown: #ee7800 !default;
+$green-succes: #8dc647 !default;
+
+
+
+
+//socials colors
+
+$c-rss: #f4b459 !default;
+$c-mail: #996DD1 !default;
+$c-pinterest: #cc2127 !default;
+$c-googleplus: #dd4b39 !default;
+$c-google: #dd4b39 !default;
+$c-facebook: #2f5b9d !default;
+$c-twitter: #38bff1 !default;
+$c-amazone: #F69B06 !default;
+$c-behance: #2D2D2D !default;
+$c-bing: #FFA616 !default;
+$c-creative-market: #8DA741 !default;
+$c-deviantart: #1B1B1B !default;
+$c-dribbble: #f74881 !default;
+$c-dropbox: #0BA4E0 !default;
+$c-envato: #6D9C3E !default;
+$c-flickr: #26A9E1 !default;
+$c-instagram: #E75351 !default;
+$c-kickstarter: #14E06E !default;
+$c-linkedin: #4A8F9E !default;
+$c-medium: #00E56B !default;
+$c-periscope: #3FA4C4 !default;
+$c-quora: #F85F62 !default;
+$c-reddit: #F05825 !default;
+$c-shutterstock: #008EC0 !default;
+$c-skype: #00AAF1 !default;
+$c-snapchat: #FFED45 !default;
+$c-soundcloud: #FF3300 !default;
+$c-spotify: #1ED760 !default;
+$c-trello: #0079BF !default;
+$c-tumblr: #36465D !default;
+$c-vimeo: #1AB7EA !default;
+$c-vk: #6383A8 !default;
+$c-whatsapp: #25D366 !default;
+$c-wikipedia: #000000 !default;
+$c-wordpress: #21759B !default;
+$c-youtube: #CD201F !default;
+
+
+
+$bg-primary: $primary-color !default;
+$bg-secondary: $secondary-color !default;
+
+$hr-color: #3d4451 !default;
+
+$alert-grey: #20232a !default;
+$alert-close-color: #3c424e !default;
+$chart-bg: #2a2e37 !default;
+$bg-accordion: #131418 !default;
+$bg-accordion-grey: #1e2126 !default;
+$bg-accordion-faqs: #181a20 !default;
+$table-border-color: #21232b !default;
+$testimonial-bg: #131519 !default;
+$rait-color: #d30b97 !default;
+$quote-hover-color: #1e1f24 !default;
+$input-color: #a0a9ba !default;
+$input-dark-bg: #202228 !default;
+$tabs-dark-bg: #0f3644 !default;

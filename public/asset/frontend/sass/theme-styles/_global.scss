@@ -1,0 +1,529 @@
+/*------------- #GLOBAL STYLES --------------*/
+
+@font-face{
+  font-family: 'Comfortaa';
+  src: url('../fonts/Comfortaa-Bold_0.eot');
+  src: url('../fonts/Comfortaa-Bold_0.eot?#iefix')format('embedded-opentype'),
+  url('../fonts/Comfortaa-Bold_0.woff') format('woff'),
+  url('../fonts/Comfortaa-Bold_0.ttf') format('truetype');
+
+  src: url('../fonts/Comfortaa-Light.eot');
+  src: url('../fonts/Comfortaa-Light.eot?#iefix')format('embedded-opentype'),
+  url('../fonts/Comfortaa-Light.woff') format('woff'),
+  url('../fonts/Comfortaa-Light.ttf') format('truetype');
+
+  src: url('../fonts/Comfortaa-Regular.eot');
+  src: url('../fonts/Comfortaa-Regular.eot?#iefix')format('embedded-opentype'),
+  url('../fonts/Comfortaa-Regular.woff') format('woff'),
+  url('../fonts/Comfortaa-Regular.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body{
+  position: relative;
+  height: 100%;
+}
+
+body{
+  background-image: url("../img/body-bg.png");
+  background-color: $body-bg-color;
+  color: $body-font-color;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $base-line-height;
+  letter-spacing: $body-letter-spacing;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+blockquote {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+}
+
+caption {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #777;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: $link-color;
+  transition: all 0.3s linear;
+}
+
+p {
+  font-size: $p-font-size;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+figure {
+  margin: 0;
+  max-width: 100%;
+}
+
+// Make select elements 100% width by default
+select {
+  width: 100%;
+  border: 1px solid $body-font-color;
+  appearance:none;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+}
+
+
+// Make sure textarea takes on height automatically
+textarea { height: auto; min-height: 50px; }
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+  color: $body-font-color;
+}
+
+textarea:-moz-placeholder,
+input:-moz-placeholder {
+  color: $body-font-color;
+}
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder{
+  color: $body-font-color;
+}
+
+input, textarea {
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  &:invalid {
+    border: 1px solid #ff00004d;
+  }
+
+  &:-moz-submit-invalid {
+    box-shadow: none;
+  }
+
+  &.wpcf7-form-control {
+    width: 100%;
+  }
+}
+
+/*------------- #Styles for list --------------*/
+
+
+ul:not([class]),
+ol:not([class]) {
+
+  li {
+    margin-bottom: .6em;
+    letter-spacing: -.015em;
+
+    strong {
+      color: $link-color;
+    }
+
+    a {
+      display: block;
+      letter-spacing: -.015em;
+    }
+  }
+
+  ul {
+    padding: 0;
+    padding-left: 40px;
+    margin: 20px 0 15px;
+    list-style: inherit;
+
+    li {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.list {
+  color: $body-font-color;
+  overflow: hidden;
+
+  ul {
+	list-style: none;
+	padding: 0;
+	padding-left: 60px;
+	margin: 15px 0 0;
+
+	li {
+	  font-size: 14px;
+      margin-bottom: 0;
+      letter-spacing: -.015em;
+      color: $body-font-color;
+	}
+  }
+
+  li {
+    margin-bottom: 0.6em;
+    font-size: 1em;
+    overflow: hidden;
+    clear: both;
+    transition: all .3s ease;
+
+    a {
+      max-width: calc(100% - 50px);
+    }
+
+    a, li {
+      display: inline-block;
+      vertical-align: top;
+      letter-spacing: -.015em;
+    }
+
+    i, .woox-icon {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 15px;
+      font-weight: 900;
+      font-size: 12px;
+    }
+  }
+}
+
+.list--primary {
+  i, .woox-icon {
+    color: $primary-color;
+    fill: $primary-color;
+	height: 19px;
+	width: 19px;
+  }
+
+  a:hover {
+    color: $primary-color;
+    fill: $primary-color;
+  }
+
+  ul {
+
+	li {
+
+	  &:before {
+		content: "-";
+		display: inline-block;
+		font-size: inherit;
+		margin-right: 6px;
+	  }
+	}
+  }
+}
+
+.list--round {
+  li {
+    i, .woox-icon {
+      margin-right: 25px;
+      width: 12px;
+      height: 12px;
+      top: 6px;
+      position: relative;
+      fill: $primary-color;
+    }
+  }
+}
+
+ol {
+  counter-reset: list1;
+  margin: 15px 0;
+
+  li {
+    list-style: none;
+    transition: all .3s ease;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: .35em;
+    font-size: 1em;
+
+    a {
+      display: inline-block;
+    }
+  }
+
+  ul {
+    li {
+      list-style: initial;
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+}
+
+/* Init counter */
+
+ol li:before {
+  position:absolute;
+  counter-increment: list1; /* Add "1" */
+  content: counter(list1) "."; /* Show count */
+  color: $body-font-color;
+  font-weight: 700;
+  display: inline-block;
+  left: 0;
+}
+
+ol ol {
+  counter-reset: list2;
+  margin: 10px 0;
+  padding-left: 0;
+}
+
+ol ol li {
+  padding-left: 40px;
+}
+
+ol ol li:before {
+  counter-increment: list2;
+  content: counter(list1) "." counter(list2) ". ";
+}
+
+ol ul ol {
+  counter-reset: list1;
+
+  li:before {
+    counter-increment: list1; /* Add "1" */
+    content: counter(list1) "."; /* Show count */
+  }
+
+}
+
+blockquote {
+  p {
+    margin: 0;
+  }
+}
+
+p {
+  margin: 0 0 1.5em 0;
+}
+
+ul ul,
+ol ul,
+ul ol {
+  margin: 10px 0;
+  padding-left: 0;
+}
+
+ul ol li::before {
+  position: absolute;
+  counter-increment: list1;
+  content: counter(list1) ".";
+  color: #2f2c2c;
+  display: inline-block;
+  font-size: 18px;
+  left: 0;
+}
+
+ul ol ul li::before {
+  content: "\f0da";
+  position: absolute;
+  left: 0;
+  transition: all .3s ease;
+  font-family: "FontAwesome";
+  counter-increment: none;
+  font-size: 12px;
+}
+
+ol ul ol li:before {
+  counter-increment: list1; /* Add "1" */
+  content: counter(list1) "."; /* Show count */
+  color: $heading-color;
+  display: inline-block;
+  position:absolute;
+  list-style: none;
+  font-size: 18px;
+  left: 0;
+}
+
+ol ol ol {
+  counter-reset: list3;
+}
+
+ol ol ol li {
+  padding-left: 55px;
+}
+
+ol ol ol li::before {
+  counter-increment: list3;
+  content: counter(list1) "." counter(list1) "." counter(list3) ".";
+}
+
+ul ol li {
+  padding-left: 40px;
+}
+
+
+blockquote {
+  margin: 1em 0;
+  padding: 110px;
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  border-radius: 20px;
+  overflow: hidden;
+
+  h6 {
+    font-style: normal;
+    font-size: 16px;
+
+    span {
+      color: $icon-color;
+      display: block;
+      font-weight: 400;
+    }
+  }
+
+  cite {
+    display: block;
+    color: $body-font-color;
+    font-size: .7em;
+
+    &:before {
+      content: "\2014\00a0";
+      color: $body-font-color;
+    }
+  }
+
+  &:before {
+    content: "";
+    width: 80px;
+    height: 90px;
+    position: absolute;
+    top: 90px;
+    left: 80px;
+    display: block;
+    background: url("../svg-icons/quote-icon.svg") 50% 50% no-repeat;
+    background-size: contain;
+    z-index: 1;
+  }
+
+  p {
+    margin: 0 0 40px;
+    font-size: 30px;
+    line-height: 1.6em;
+    z-index: 2;
+    position: relative;
+    color: $primary-color;
+  }
+}
+
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+
+/*------------- Responsive Mode --------------*/
+
+@media (max-width: 768px) {
+  blockquote {
+    padding: 30px;
+    text-align: center;
+
+    P {
+      font-size: 18px;
+    }
+
+    &:before {
+      width: 40px;
+      height: 50px;
+      top: 30px;
+      left: 30px;
+    }
+  }
+
+  .list {
+    padding-left: 0;
+  }
+
+  .list--round li .woox-icon,
+  .list--round li i {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .list li,
+  ul li {
+    font-size: 13px;
+  }
+
+  ol li {
+    font-size: 13px;
+    padding-left: 20px;
+  }
+
+  ol ol li {
+    padding-left: 30px;
+  }
+
+  ol ol ol li {
+    padding-left: 40px;
+  }
+
+  .list--primary .woox-icon {
+    height: 11px;
+    width: 11px;
+  }
+}

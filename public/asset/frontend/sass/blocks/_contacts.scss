@@ -1,0 +1,100 @@
+/*------------- #CONTACTS --------------*/
+
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .info {
+	color: $link-color;
+	font-weight: $h-font-weight;
+	font-size: 18px;
+
+	span {
+	  display: inline-block;
+	  color: $body-font-color;
+	  font-weight: $body-font-weight;
+	}
+
+	a {
+	  color: $white-color;
+
+	  &:hover {
+		color: $primary-color;
+	  }
+	}
+  }
+
+  .info-wrap {
+	span {
+	  font-size: 18px;
+	}
+  }
+
+  .socials {
+	margin-top: 40px;
+  }
+
+  & + .contact-item {
+	margin-top: 50px;
+  }
+}
+
+.contact-item-title {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+
+  &:after {
+	content: ".";
+	font-size: inherit;
+	color: $primary-color;
+	width: 0;
+	display: inline-block;
+	position: relative;
+  }
+}
+
+#map,
+.crumina-map {
+  position: relative;
+  border-radius: 0 20px 20px 0;
+  overflow: hidden;
+  box-shadow: 70px 0 110px rgba(0, 0, 0, .3);
+  max-height: 90vh;
+
+  .map-canvas {
+	height: 100%;
+  }
+}
+
+.block-location-info {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  z-index: 999;
+  max-width: 90%;
+
+  .adress {
+	color: $primary-color;
+  }
+}
+
+
+/*------------- Responsive Mode --------------*/
+
+
+@media (max-width: 1024px) {
+  .contact-item + .contact-item {
+	margin-top: 20px;
+  }
+}
+
+@media (max-width: 799px) {
+  #map,
+  .crumina-map {
+	border-radius: 20px;
+  }
+}

@@ -1,0 +1,108 @@
+/*------------- #CIRCLED BLOCK --------------*/
+
+
+
+@mixin distribute-on-circle( $nb-items, $circle-size, $item-size) {
+  $half-item: ($item-size / 2);
+  $half-parent: ($circle-size / 2);
+  position: relative;
+  width: $circle-size;
+  height: $circle-size;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+  > * {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: $item-size;
+	height: $item-size;
+	margin: -$half-item;
+  }
+  $angle: (360 / $nb-items);
+  $rot: 0;
+  @for $i from 1 through $nb-items {
+	>:nth-of-type(#{$i}) {
+	  transform: rotate($rot * 1deg) translate($half-parent) rotate($rot * -1deg);
+	}
+	$rot: ($rot + $angle);
+  }
+}
+
+.crumina-circled-block {
+  @include distribute-on-circle(4, 25em, 200px);
+  background-image: url("../img/woox.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin: 6em auto;
+}
+
+.circle__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: #111216;
+
+  .woox-icon {
+	max-width: 80px;
+	margin-bottom: 20px;
+  }
+
+  .title {
+	font-weight: 700;
+	color: $white-color;
+  }
+
+  img {
+	display: inline-block;
+	width: 100%;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+
+  .crumina-circled-block {
+	margin: 3em auto;
+	width: 20em;
+	height: 20em;
+  }
+
+  .crumina-circled-block > * {
+	width: 100px;
+	height: 100px;
+	margin: -50px;
+  }
+
+  .circle__item .woox-icon {
+	max-width: 40px;
+  }
+}
+
+@media (max-width: 460px) {
+
+  .crumina-circled-block {
+	width: 100%;
+	height: 15em;
+	margin: 3em auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+
+  .crumina-circled-block > * {
+	position: relative;
+	top: auto;
+	left: auto;
+	transform: none !important;
+	margin: 0;
+	width: 40%;
+  }
+}

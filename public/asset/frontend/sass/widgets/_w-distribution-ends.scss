@@ -1,0 +1,102 @@
+/*------------- #W-DISTRIBUTION ENDS --------------*/
+
+.w-distribution-ends {
+  padding: 80px;
+  border-radius: 20px;
+  background-color: $black-light;
+  box-shadow: 0 80px 110px 0 rgba(0, 0, 0, 0.3);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  text-align: center;
+
+  & > * {
+	margin-bottom: 50px;
+
+	&:last-child {
+	  margin-bottom: 0;
+	}
+  }
+
+  .crumina-skills-item {
+	margin-bottom: 100px;
+	text-align: left;
+
+	.skills-item-title {
+	  font-size: 14px;
+	  display: block;
+	}
+
+	.skills-item-count {
+	  font-size: 14px;
+	  float: right;
+	}
+  }
+
+  .crumina-countdown-item + .btn {
+	margin-left: 0;
+  }
+
+  .add-info {
+	margin-top: 15px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	font-size: 14px;
+  }
+
+  .price-wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+
+	.token-price {
+	  text-align: left;
+
+	  .price-value {
+		font-size: 24px;
+		color: $link-color;
+		font-weight: bold;
+		line-height: 1.2;
+	  }
+	}
+
+	.token-total {
+	  text-align: right;
+
+	  .price-value {
+		font-size: 46px;
+		color: $link-color;
+		font-weight: bold;
+		line-height: 1.2;
+	  }
+	}
+  }
+}
+
+
+
+/*------------- Responsive Mode --------------*/
+
+@media (max-width: 1300px) {
+  .w-distribution-ends {
+	padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .w-distribution-ends .price-wrap .token-total .price-value {
+	font-size: 24px;
+  }
+
+  .w-distribution-ends {
+	padding: 20px;
+  }
+
+  .w-distribution-ends > * {
+	margin-bottom: 20px;
+  }
+
+  .w-distribution-ends .crumina-skills-item {
+	margin-bottom: 40px;
+  }
+}

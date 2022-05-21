@@ -1,0 +1,129 @@
+/*------------- #COUNTERS --------------*/
+
+
+.crumina-counter-item {
+  text-align: center;
+
+  &:hover {
+	.counter-line {
+	  width: 80%;
+	  background-color: $primary-color;
+	}
+	.woox-icon {
+	  fill: $primary-color;
+	}
+  }
+
+  .woox-icon {
+	fill: $icon-color;
+	width: 100px;
+	height: 100px;
+  }
+}
+
+.counter-numbers {
+  color: $primary-color;
+  font-size: 80px;
+  font-weight: $h-font-weight;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .units {
+	color: $icon-color;
+  }
+}
+
+.counter-line {
+  width: 80px;
+  height: 4px;
+  background-color: $border-color;
+  border-radius: 5px;
+  margin: 10px auto;
+  transition: all .3s ease;
+}
+
+.bg-dotted-map {
+  background: url("../img/dotted-map.png") no-repeat;
+  background-size: contain;
+  background-position: 50%;
+}
+
+.counter-title {
+  margin-bottom: 30px;
+}
+
+
+/*================= Counter Icon Left ============*/
+
+.counter--icon-left {
+  text-align: left;
+
+  .woox-icon {
+	float: left;
+	margin-right: 35px;
+	width: 80px;
+	height: 80px;
+  }
+
+  .counter-content {
+	overflow: hidden;
+  }
+
+  .counter-numbers {
+	font-size: 48px;
+	justify-content: flex-start;
+	line-height: 1.1;
+  }
+
+  .counter-title {
+	font-size: 20px;
+	margin-bottom: 15px;
+	margin-top: 0;
+  }
+
+  .counter-text {
+	font-size: 14px;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+  .counter-numbers {
+	font-size: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .crumina-counter-item {
+	text-align: center;
+  }
+
+  .counter--icon-left {
+	text-align: left;
+  }
+
+  .counter-numbers {
+	justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .counter-numbers {
+	font-size: 40px;
+  }
+
+  .counter--icon-left .woox-icon {
+	width: 40px;
+	height: 40px;
+	margin-right: 0;
+	margin-bottom: 10px;
+	float: none;
+  }
+
+  .counter--icon-left .counter-numbers {
+	font-size: 30px;
+  }
+}

@@ -1,0 +1,611 @@
+/*------------- #INFO-BOXES --------------*/
+
+
+.crumina-info-box {
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.info-box-thumb {
+  position: relative;
+  border-radius: 100%;
+  margin: 0 auto 10px;
+  transition: all .3s ease;
+
+  .woox-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.info-box-content {
+  overflow: hidden;
+}
+
+.info-box-title {
+  max-width: 75%;
+  margin: 15px auto;
+  color: $link-color;
+  transition: all .3s ease;
+
+  span {
+	color: $icon-color;
+	transition: all .3s ease;
+  }
+}
+
+.info-box-text {
+  max-width: 75%;
+  margin: 0 auto 30px;
+  transition: all .3s ease;
+}
+
+
+/*------------- #Info-box double borders --------------*/
+
+.info-box--double-borders {
+  .info-box-thumb {
+    width: 160px;
+    height: 160px;
+    line-height: 160px;
+	border: 10px double $border-color;
+
+    .woox-icon {
+      width: 110px;
+      height: 110px;
+	  fill: $border-color;
+    }
+  }
+
+  &:after {
+	content: '';
+	display: block;
+	width: 80px;
+	height: 4px;
+	background-color: $border-color;
+	border-radius: 5px;
+	margin: 10px auto;
+	transition: all .3s ease;
+  }
+
+  &:hover {
+	.info-box-thumb {
+	  border-color: $primary-color;
+
+	  .woox-icon {
+		fill: $primary-color;
+	  }
+	}
+
+	.info-box-title {
+	  color: $primary-color;
+
+	  span {
+		color: $primary-color;
+	  }
+	}
+
+	.info-box-text {
+	  color: $link-color;
+	}
+
+	&:after {
+	  background-color: $primary-color;
+	  width: 60%;
+	}
+  }
+}
+
+
+
+/*------------- #Info-box style2 --------------*/
+
+.info-box--style2 {
+  text-align: left;
+  padding-left: 40px;
+
+  .info-box-thumb {
+	width: 170px;
+	height: 170px;
+	line-height: 170px;
+	border: 10px double $border-color;
+	margin: 0 0 -70px -40px;
+
+	.woox-icon {
+	  width: 110px;
+	  height: 110px;
+	  fill: $border-color;
+	}
+  }
+
+  .info-box-content {
+	position: relative;
+	z-index: 5;
+  }
+
+  .info-box-title {
+	max-width: none;
+  }
+
+  .info-box-text {
+	max-width: none;
+  }
+
+  &:hover {
+	.info-box-thumb {
+	  border-color: $primary-color;
+	  width: 80px;
+	  height: 80px;
+	  line-height: 80px;
+	  margin: 0 0 20px 0;
+
+	  .woox-icon {
+		fill: $primary-color;
+		width: 50px;
+		height: 50px;
+	  }
+	}
+
+	.info-box-title {
+	  color: $primary-color;
+
+	  span {
+		color: $primary-color;
+	  }
+	}
+
+	.info-box-text {
+	  color: $link-color;
+	}
+  }
+}
+
+
+/*------------- #Info-box style4 --------------*/
+
+.info-box--style4 {
+  border: 4px solid transparent;
+  border-radius: 20px;
+  padding: 60px;
+  background-color: $testimonial-bg;
+
+  .info-box-title {
+	max-width: none;
+  }
+
+  .info-box-text {
+	max-width: none;
+  }
+
+  .info-box-thumb {
+	width: 160px;
+	height: 160px;
+	line-height: 160px;
+	border: 10px double $border-color;
+
+	.woox-icon {
+	  width: 110px;
+	  height: 110px;
+	  fill: $border-color;
+	}
+  }
+
+  &:hover {
+	border-color: $primary-color;
+
+	.info-box-thumb {
+	  border-color: $primary-color;
+
+	  .woox-icon {
+		fill: $primary-color;
+	  }
+	}
+
+	.info-box-title {
+	  color: $primary-color;
+
+	  span {
+		color: $primary-color;
+	  }
+	}
+
+	.info-box-text {
+	  color: $link-color;
+	}
+
+	.btn {
+	  background-color: $primary-color;
+	  color: $white-color;
+	  border-color: $primary-color;
+
+	  .woox-icon {
+		fill: $white-color;
+	  }
+	}
+  }
+}
+
+
+/*------------- #Info-box BG-colored --------------*/
+
+
+.info-box--bg-colored {
+  border-radius: 20px;
+  padding: 60px;
+
+  .info-box-title {
+	max-width: none;
+	color: $white-color;
+	line-height: 1;
+
+	span {
+	  display: block;
+	  color: $primary-color;
+	}
+  }
+
+  .info-box-text {
+	max-width: none;
+	color: $white-color;
+  }
+
+  .info-box-thumb {
+	margin: 20px auto;
+
+	.woox-icon {
+	  position: relative;
+	  top: auto;
+	  left: auto;
+	  transform: translate(0);
+	  min-width: 160px;
+	  min-height: 160px;
+	  max-width: 160px;
+	  max-height: 160px;
+	}
+  }
+
+  &:hover {
+	.btn {
+	  background-color: $primary-color;
+	  border-color: $primary-color;
+	  color: $white-color;
+
+	  .woox-icon {
+		fill: $white-color;
+	  }
+
+	}
+  }
+}
+
+
+
+/*------------- #Info-box style5 --------------*/
+
+
+.info-box--style5 {
+  text-align: left;
+
+  .info-box-title {
+    max-width: none;
+  }
+
+  .info-box-text {
+	max-width: none;
+  }
+
+  .info-box-thumb {
+    width: 80px;
+    height: 80px;
+    float: left;
+	margin: 0 40px 0 0;
+
+    .woox-icon {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 80px;
+      height: auto;
+    }
+  }
+
+  &:hover {
+
+	.info-box-title {
+	  color: $primary-color;
+
+	  span {
+		color: $primary-color;
+	  }
+	}
+
+	.info-box-text {
+	  color: $link-color;
+	}
+
+	.btn {
+	  background-color: $primary-color;
+	  border-color: $primary-color;
+	  color: $white-color;
+
+	  .woox-icon {
+		fill: $white-color;
+	  }
+	}
+  }
+}
+
+
+
+/*------------- #Info-box style6 --------------*/
+
+.info-box--style6 {
+  text-align: left;
+  border: 4px solid transparent;
+  border-radius: 20px;
+  padding: 80px;
+  background-color: $testimonial-bg;
+
+  .info-box-thumb {
+	width: 160px;
+	height: 160px;
+	float: left;
+	margin: 0 40px 0 0;
+
+	.woox-icon {
+	  position: relative;
+	  top: auto;
+	  left: auto;
+	  transform: none;
+	  width: 160px;
+	  height: auto;
+	}
+  }
+
+  .info-box-title {
+    max-width: none;
+  }
+
+  .info-box-text {
+    max-width: none;
+  }
+
+  &:hover {
+	border-color: $primary-color;
+
+	.info-box-title {
+	  color: $primary-color;
+
+	  span {
+		color: $primary-color;
+	  }
+	}
+
+	.info-box-text {
+	  color: $link-color;
+	}
+
+	.btn {
+	  background-color: $primary-color;
+	  border-color: $primary-color;
+	  color: $white-color;
+
+	  .woox-icon {
+		fill: $white-color;
+	  }
+	}
+  }
+}
+
+
+
+/*------------- #Info-box style7 --------------*/
+
+.info-box--style7 {
+  padding: 0 70px 60px;
+  border: 4px solid $hr-color;
+  border-radius: 40px;
+  margin-top: 70px;
+
+  .info-box-thumb {
+	margin: -70px auto 30px;
+    background-color: $primary-color;
+	width: 160px;
+	height: 160px;
+
+	.woox-icon {
+	  position: relative;
+	  top: auto;
+	  left: auto;
+	  transform: none;
+	  width: 160px;
+	  height: auto;
+	}
+  }
+
+  .info-box-text {
+	max-width: none;
+  }
+
+  .info-box-title {
+	max-width: none;
+  }
+
+  &:hover {
+	background-color: $testimonial-bg;
+	border-color: $primary-color;
+
+	.info-box-title {
+	  color: $primary-color;
+
+	  span {
+		color: $primary-color;
+	  }
+	}
+
+	.info-box-text {
+	  color: $link-color;
+	}
+
+	.btn {
+	  background-color: $primary-color;
+	  color: $white-color;
+	  border-color: $primary-color;
+
+	  .woox-icon {
+		fill: $white-color;
+	  }
+	}
+  }
+}
+
+
+/*------------- Responsive Mode --------------*/
+
+@media (max-width: 1300px) {
+
+  .info-box--style2 {
+	padding-left: 0;
+  }
+
+  .info-box--style2 .info-box-thumb {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	margin: 0 0 -70px 0;
+	border-width: 5px;
+  }
+
+  .info-box--style2 .info-box-title {
+	font-size: 18px;
+  }
+
+  .info-box--style2 .info-box-thumb .woox-icon {
+	width: 40px;
+	height: 40px;
+  }
+
+  .info-box--style2:hover .info-box-thumb .woox-icon {
+	width: 20px;
+	height: 20px;
+  }
+
+  .info-box--style2:hover .info-box-thumb {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 0 -10px 0;
+  }
+
+  .info-box--style6 {
+    padding: 30px;
+  }
+
+  .info-box--style4 {
+    padding: 30px;
+  }
+
+  .info-box--style7 {
+    padding: 0 20px 20px;
+  }
+
+  .info-box--style5 .info-box-thumb {
+    margin: 0;
+    float: none;
+  }
+
+  .info-box-title {
+	max-width: 100%;
+  }
+
+  .info-box-text {
+	max-width: 100%;
+  }
+
+  .info-box--style4 .info-box-thumb {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+  }
+
+  .info-box--style4 .info-box-thumb .woox-icon {
+	width: 60px;
+	height: 60px;
+  }
+
+  .info-box-thumb {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+  }
+
+  .info-box--double-borders .info-box-thumb {
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+  }
+
+  .info-box--double-borders .info-box-thumb .woox-icon {
+	width: 60px;
+	height: 60px;
+  }
+
+  .info-box--bg-colored .info-box-thumb .woox-icon {
+	min-width: 100px;
+	min-height: 100px;
+	max-width: 100px;
+	max-height: 100px;
+  }
+
+  .info-box--style6 .info-box-thumb {
+	width: 100px;
+	height: 100px;
+	margin: 0;
+	float: none;
+
+	.woox-icon {
+	  width: 100%;
+	}
+  }
+
+  .info-box--style7 .info-box-thumb {
+	margin: -50px auto 30px;
+	width: 100px;
+	height: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .info-box--bg-colored {
+	padding: 40px;
+  }
+
+  .info-box--style2 .info-box-thumb {
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	margin: 0 0 -40px 0;
+	border-width: 3px;
+  }
+
+  .info-box--style2 .info-box-thumb .woox-icon {
+	width: 35px;
+	height: 35px;
+  }
+
+  .info-box--style2:hover .info-box-thumb .woox-icon {
+	width: 15px;
+	height: 15px;
+  }
+
+  .info-box--style2:hover .info-box-thumb {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0;
+  }
+}

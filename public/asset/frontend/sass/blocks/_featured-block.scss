@@ -1,0 +1,48 @@
+/*------------- #FEATURED BLOCK --------------*/
+
+
+.crumina-featured-block {
+  display: flex;
+  align-items: center;
+
+  .image-block {
+	width: 70%;
+  }
+
+  .text-block {
+	width: 50%;
+	margin-left: -320px;
+  }
+}
+
+
+/*------------- Responsive Mode --------------*/
+
+
+@media (max-width: 1300px) {
+  .crumina-featured-block .text-block {
+	margin-left: 0;
+  }
+
+  .crumina-featured-block .image-block {
+	width: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .crumina-featured-block {
+	flex-direction: column;
+	text-align: center;
+  }
+
+  .crumina-featured-block .text-block {
+	width: 100%;
+	padding: 0 15px;
+  }
+
+  .crumina-featured-block .image-block {
+	width: 100%;
+	padding: 0 15px;
+  }
+}

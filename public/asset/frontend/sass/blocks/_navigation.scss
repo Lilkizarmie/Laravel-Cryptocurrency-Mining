@@ -1,0 +1,112 @@
+/*------------- #NAVIGATION --------------*/
+
+
+.navigation {
+  margin: 20px 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.page-numbers {
+  position: relative;
+  background-color: #101216;
+  display: inline-block;
+  margin: 0 12px 0 0;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 100%;
+  border: 4px solid transparent;
+  font-weight: $h-font-weight;
+
+  &:hover {
+	border-color: $primary-color;
+	background-color: $primary-color;
+	color: $white-color;
+  }
+
+  &:active {
+	background-color: transparent;
+	border-color: $primary-color;
+	color: $primary-color;
+  }
+
+  &.current {
+	background-color: transparent;
+	border-color: $primary-color;
+	color: $primary-color;
+
+	&:hover {
+	  border-color: $primary-color;
+	}
+  }
+
+  span {
+	position: relative;
+  }
+
+  &.btn-next,
+  &.btn-prev {
+	background-color: transparent;
+	min-width: auto;
+	min-height: auto;
+	max-width: unset;
+	max-height: unset;
+	border: none;
+	box-shadow: none;
+
+	&:active {
+	  box-shadow: inset 2px 4px 0 0 transparent, 2px 4px 0 0 transparent;
+	  background-color: transparent;
+	  border-color: transparent;
+	}
+  }
+
+  &.btn-next {
+	margin-right: 80px;
+  }
+
+  &.btn-prev {
+	margin-right: 40px;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+  .navigation {
+	flex-wrap: wrap;
+	justify-content: end;
+  }
+
+  .page-numbers {
+	margin: 0 8px 0 0;
+	min-width: 30px;
+	min-height: 30px;
+	max-height: 30px;
+	max-width: 30px;
+	line-height: 24px;
+	font-size: 12px;
+  }
+
+  .page-numbers.btn-next {
+	margin-right: 20px;
+  }
+
+  .page-numbers.btn-prev {
+	margin-right: 20px;
+  }
+}

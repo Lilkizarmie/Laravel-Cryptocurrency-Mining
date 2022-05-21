@@ -1,0 +1,489 @@
+/*------------- #ACCORDIONS --------------*/
+
+
+.crumina-accordion {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-panel {
+  position: relative;
+  border-top: 1px solid $border-color;
+
+  &.active {
+	border-top: 2px solid $primary-color;
+
+	.accordion-heading {
+	  padding-bottom: 25px;
+	}
+  }
+}
+
+.accordion-heading {
+  display: flex;
+  align-items: center;
+  padding: 35px 0;
+  font-size: 20px;
+  transition: all .3s ease;
+  text-transform: uppercase;
+
+  .title {
+    font-weight: $h-font-weight;
+    transition: all .3s ease;
+  }
+
+  .icons {
+    line-height: 1;
+    padding-right: 30px;
+    transition: all .3s ease;
+    opacity: 1;
+    position: relative;
+
+    .woox-icon {
+      height: 16px;
+      width: 16px;
+      fill: $border-color;
+    }
+
+    .active {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      transition: all .3s ease;
+      top: 5px;
+    }
+  }
+}
+
+.crumina-accordion .panel-collapse {
+  padding: 0 0 30px 0;
+  transition: all .3s ease;
+}
+
+.crumina-accordion .panel-heading {
+  transition: all .3s ease;
+
+  &.active {
+
+    .accordion-heading {
+
+      .title {
+        color: $primary-color;
+      }
+
+      i, .woox-icon {
+        transform: rotate(180deg);
+        fill: $primary-color;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+
+/*------------- #ACCORDION Style 1 --------------*/
+
+.accordion--style1 {
+  overflow: hidden;
+
+  .accordion-heading {
+    color: $link-color;
+	text-transform: none;
+  }
+
+  .panel-collapse {
+	padding: 0 0 30px 45px;
+  }
+
+  .accordion-panel {
+    border-bottom: 1px solid $border-color;
+	border-top: none;
+  }
+}
+
+
+/*------------- #ACCORDION Style 2 --------------*/
+
+.accordion--style2 {
+  border-radius: 10px;
+  overflow: hidden;
+
+  .accordion-panel {
+    background-color: $bg-accordion;
+	border: none;
+
+	&.active {
+	  background-color: $bg-accordion-grey;
+	}
+  }
+
+  .accordion-heading {
+	color: $link-color;
+	text-transform: none;
+	padding: 25px 40px;
+  }
+
+  .panel-collapse {
+    padding: 0 40px 30px 85px;
+  }
+}
+
+
+/*------------- #ACCORDION Style 3 --------------*/
+
+.accordion--style3 {
+
+  .accordion-panel {
+    border-radius: 10px;
+	margin-bottom: 10px;
+	background-color: $bg-accordion-grey;
+	border-top: none;
+
+	&.active {
+	  background-color: $bg-accordion;
+
+	  .accordion-heading {
+		padding-bottom: 20px;
+	  }
+	}
+  }
+
+  .panel-collapse {
+    padding: 0 30px 30px 90px;
+  }
+
+  .accordion-heading {
+	color: $link-color;
+	text-transform: none;
+	padding: 20px;
+
+    .icons {
+	  min-width: 40px;
+	  min-height: 40px;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      border: 3px solid transparent;
+      position: relative;
+      padding-right: 0;
+      margin-right: 30px;
+	  background-color: $bg-accordion;
+
+      .woox-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -7px;
+        margin-left: -8px;
+      }
+    }
+  }
+
+  .panel-heading {
+
+    &.active {
+      .accordion-heading {
+        .icons {
+          border-color: $primary-color;
+        }
+
+        .woox-icon {
+          transform: rotate(0);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+
+/*------------- #ACCORDION Style 4 --------------*/
+
+.accordion--style4 {
+  .accordion-panel {
+	margin-bottom: 10px;
+	border-top: none;
+
+	&.active {
+	  border-top: none;
+	}
+  }
+
+  .panel-collapse {
+	padding: 40px;
+  }
+
+  .accordion-heading {
+	border-radius: 10px;
+    padding: 20px;
+	color: $link-color;
+	text-transform: none;
+	background-color: $bg-accordion-grey;
+
+    .icons {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      position: relative;
+      padding-right: 0;
+      margin-right: 30px;
+	  background-color: $bg-accordion;
+
+      .woox-icon {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -6px;
+        margin-left: -6px;
+      }
+    }
+  }
+
+  .panel-heading {
+
+    &.active {
+      .accordion-heading {
+        .icons {
+          background-color: $primary-color;
+        }
+
+        .woox-icon {
+          fill: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+
+/*------------- #ACCORDION Style 5 --------------*/
+
+
+.accordion--style5 {
+
+  .accordion-panel {
+	margin-bottom: 10px;
+	border-top: none;
+
+	&.active {
+
+	  .accordion-heading {
+		background-color: $primary-color;
+		padding-bottom: 20px;
+	  }
+	}
+  }
+
+  .panel-collapse {
+	padding: 40px;
+  }
+
+  .accordion-heading {
+	justify-content: space-between;
+    padding: 20px;
+	color: $link-color;
+	text-transform: none;
+	border-radius: 10px;
+	background-color: $bg-accordion-grey;
+
+	.icons {
+	  width: 30px;
+	  height: 30px;
+	  border-radius: 10px;
+	  position: relative;
+	  padding-right: 0;
+	  margin-right: 0;
+	  background-color: $bg-accordion;
+
+	  .woox-icon {
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -6px;
+		margin-left: -6px;
+	  }
+	}
+  }
+
+  .panel-heading {
+	&.active {
+	  .accordion-heading {
+		.title {
+		  color: $white-color;
+		}
+
+		.woox-icon {
+		  fill: $secondary-color;
+		}
+	  }
+	}
+  }
+}
+
+
+/*------------- #ACCORDION FAQs --------------*/
+
+.accordion--faqs {
+  background-color: $bg-accordion-faqs;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 100px 120px;
+
+  .first-letter {
+    margin-right: 30px;
+    color: $border-color;
+    float: left;
+    font-size: 30px;
+    line-height: 1;
+    transition: all .3s ease;
+  }
+
+  .panel-info {
+    overflow: hidden;
+
+   &:before {
+     display: none;
+   }
+  }
+
+  .panel-collapse {
+    padding: 0 0 40px 60px;
+  }
+
+  .accordion-heading {
+    font-size: 30px;
+    padding: 35px 0;
+	text-transform: none;
+	color: $link-color;
+  }
+
+  .accordion-panel {
+    border-radius: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border-bottom: 2px solid #21232b;
+	border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.active {
+      .first-letter {
+        color: $icon-color;
+      }
+    }
+  }
+}
+
+/*=====================================================
+                Transition
+=======================================================*/
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.collapse {
+  display: none;
+}
+
+.collapse.in {
+  display: block;
+}
+
+tr.collapse.in {
+  display: table-row;
+}
+
+tbody.collapse.in {
+  display: table-row-group;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility;
+}
+
+
+
+/*================= Responsive Mode ============*/
+
+
+@media (max-width: 1024px) {
+  .accordion--faqs {
+    padding: 40px 50px;
+  }
+
+  .accordion-heading .title {
+    line-height: 1;
+    font-size: 13px;
+  }
+
+  .crumina-accordion .panel-info {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion--style3 .accordion-heading .icons {
+	min-width: 30px;
+	min-height: 30px;
+	width: 30px;
+	height: 30px;
+	margin-right: 15px;
+  }
+}
+
+@media (max-width: 540px) {
+  .crumina-accordion .panel-collapse,
+  .accordion--style3 .panel-collapse {
+    padding: 0 20px 40px;
+  }
+
+  .accordion-heading,
+  .accordion--style1 .accordion-heading,
+  .accordion--style2 .accordion-heading,
+  .accordion--style3 .accordion-heading,
+  .accordion--style5 .accordion-heading {
+    padding: 20px;
+  }
+
+  .accordion--faqs {
+	padding: 20px;
+  }
+
+  .accordion--faqs .accordion-heading {
+	padding: 20px 0;
+  }
+
+  .accordion--style5 .panel-collapse,
+  .accordion--style4 .panel-collapse {
+	padding: 20px;
+  }
+}

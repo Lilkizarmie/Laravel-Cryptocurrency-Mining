@@ -1,0 +1,44 @@
+/*------------- #W-LATEST-NEWS --------------*/
+
+
+.w-latest-news {
+  .latest-news-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 50px 0;
+  }
+
+  .post__title {
+	font-size: 16px;
+	margin: 8px 0;
+	line-height: 1.65em;
+  }
+
+  .divider {
+	margin: 40px auto;
+  }
+
+  .post__date {
+	font-size: 14px;
+
+	.number {
+	  font-size: 14px;
+	  display: inline-block;
+	}
+  }
+}
+
+
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+  .w-latest-news .latest-news-list {
+	margin: 20px 0;
+  }
+
+  .w-latest-news .divider {
+	margin: 20px auto;
+  }
+}

@@ -1,0 +1,55 @@
+/*------------- #EXPERTS --------------*/
+
+
+/* Orbitlist core */
+ul.orbit.orbitlistJS {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+}
+
+/* Orbitlist satellites */
+ul.orbit.orbitlistJS li {
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+
+  &.relative {
+	transform: none;
+	top: auto !important;
+	left: auto !important;
+	position: relative;
+	margin: auto;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+  ul.orbit.orbitlistJS {
+	height: auto;
+	max-height: unset;
+	flex-direction: column;
+  }
+
+  ul.orbit.orbitlistJS li {
+	position: relative;
+	display: block;
+	top: auto !important;
+	left: auto !important;
+	margin-bottom: 30px;
+
+	&:last-child {
+	  margin-bottom: 0;
+	}
+
+	&.relative {
+	  margin-bottom: 30px;
+	}
+  }
+}

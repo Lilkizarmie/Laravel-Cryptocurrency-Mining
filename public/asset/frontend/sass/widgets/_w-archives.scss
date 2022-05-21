@@ -1,0 +1,29 @@
+/*------------- #W-ARCHIVES --------------*/
+
+
+.w-archives {
+  .archives-list {
+	padding-left: 0;
+	margin: 0;
+	list-style: none;
+
+	li {
+
+	  &:last-child a {
+		border-bottom: none;
+	  }
+
+	  a {
+		display: block;
+		font-weight: 700;
+		color: $link-color;
+		padding: 12px 0;
+		border-bottom: 1px solid $hr-color;
+
+		&:hover {
+		  color: $primary-color;
+		}
+	  }
+	}
+  }
+}

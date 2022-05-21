@@ -1,0 +1,155 @@
+/*------------- #COMMENTS --------------*/
+
+
+.comments {
+  margin-bottom: 80px;
+}
+
+.comments__list {
+  padding-left: 0;
+  list-style: none;
+
+  .reply {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: $body-font-color;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 5px 23px;
+    background-color: #030305;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  .comments__avatar {
+    float: left;
+    margin-right: 40px;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      display: block;
+    }
+  }
+
+  .comments__body {
+    overflow: hidden;
+  }
+
+  .comments__author {
+    font-style: normal;
+    display: inline-block;
+
+    a {
+      color: $white-color;
+      font-weight: 700;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .comments__time {
+    font-size: 14px;
+    color: #a0a8b7;
+    padding-left: 8px;
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      background-color: $icon-color;
+      width: 5px;
+      height: 5px;
+      border-radius: 100%;
+      margin-right: 7px;
+    }
+  }
+
+  .comment-content {
+    p {
+      margin: 20px 0;
+    }
+  }
+}
+
+.comments__item {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 40px;
+
+  .children {
+    margin: 60px 0 0 120px;
+    list-style: none;
+    padding: 0;
+  }
+
+  &:before {
+    display: none;
+  }
+}
+
+
+.leave-reply {
+  label {
+    margin-left: 0;
+  }
+}
+
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+  .comments__item .children {
+    margin: 30px 0 0 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comments__list .comments__avatar img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .comments__list .comments__body {
+    padding-top: 5px;
+  }
+
+  .comments__item .children {
+    margin: 30px 0 0 30px;
+  }
+
+  .comments__item {
+    margin-top: 20px;
+  }
+
+  .contact-form.leave-reply {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .comments__list .comments__avatar {
+    float: none;
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .comments__list .comments__time {
+    display: block;
+    padding-left: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+}

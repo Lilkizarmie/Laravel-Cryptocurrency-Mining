@@ -1,0 +1,34 @@
+/*------------- #CRYPTO CONVERTER  --------------*/
+
+.crumina-crypto-converter {
+  padding: 80px;
+  border-radius: 20px;
+  background-color: $primary-color;
+  background-image: url(../img/bg-convert.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  form {
+    margin-top: 30px;
+  }
+
+  .current-crypto {
+    font-weight: 700;
+    color: $bg-accordion-faqs;
+  }
+
+  .result-crypto {
+    font-weight: 700;
+    font-size: 24px;
+    color: $white-color;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+  .crumina-crypto-converter {
+    padding: 30px;
+  }
+}

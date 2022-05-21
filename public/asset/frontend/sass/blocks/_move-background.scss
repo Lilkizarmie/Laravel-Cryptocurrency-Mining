@@ -1,0 +1,44 @@
+/*------------- #MOVE BACKGROUND --------------*/
+
+
+.crumina-flying-balls {
+  position: relative;
+
+  *[class*="col-"] {
+    z-index: 100;
+  }
+
+  &:after,
+  &:before {
+	content: '';
+	display: block;
+	height: 300px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 99;
+  }
+
+  &:after {
+	bottom: 0;
+	-webkit-box-shadow: inset 0px -200px 119px -40px #16181d;
+	-moz-box-shadow: inset 0px -200px 119px -40px #16181d;
+	box-shadow: inset 0px -150px 119px -40px #16181d;
+  }
+
+  &:before {
+	top: 0;
+	box-shadow: inset 0 150px 119px -40px #16181d;
+  }
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100%;
+  max-height: 100vh;
+}

@@ -1,0 +1,86 @@
+/*------------- #SOCIALS --------------*/
+
+
+.socials {
+  margin: 15px 0;
+  padding-left: 0;
+
+  .social-item {
+	display: inline-block;
+	margin-right: 20px;
+	vertical-align: middle;
+
+	&:last-child {
+	  margin-right: 0;
+	}
+
+	&:hover .woox-icon {
+	  fill: $primary-color;
+	  color: $primary-color;
+	}
+  }
+
+  .woox-icon {
+	height: 22px;
+	width: 22px;
+	font-size: 22px;
+	fill: $border-color;
+	color: $border-color;
+	display: block;
+	vertical-align: middle;
+	position: relative;
+	z-index: 2;
+  }
+}
+
+.socials--small {
+  .woox-icon {
+	height: 20px;
+	width: 20px;
+  }
+
+  .social-item {
+	display: inline-block;
+	margin-right: 10px;
+  }
+}
+
+.socials--white {
+  .woox-icon {
+	fill: $white-color;
+	color: $white-color;
+  }
+
+  .social-item {
+
+	&:hover .woox-icon {
+	  fill: $primary-color;
+	  color: $primary-color;
+	}
+  }
+}
+
+.socials--with-title {
+  .social-item {
+	&:first-child {
+	  font-weight: $h-font-weight;
+	  color: $secondary-color;
+	  margin-right: 30px;
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+  .socials li {
+	margin-right: 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .socials--with-title li:first-child {
+	margin-right: 10px;
+  }
+}

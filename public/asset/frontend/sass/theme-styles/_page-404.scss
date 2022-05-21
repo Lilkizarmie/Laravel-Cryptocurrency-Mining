@@ -1,0 +1,56 @@
+/*------------- #PAGE 404 --------------*/
+
+
+.page-not-found {
+  background-image: url("../img/404-bg.png");
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+
+  .crumina-heading {
+	margin-bottom: 50px;
+  }
+
+  .site-logo {
+	display: inline-flex;
+	justify-content: center;
+	margin-bottom: 50px;
+  }
+
+  .w-contacts {
+	margin-bottom: 50px;
+  }
+
+  .btn {
+	margin-top: 0;
+  }
+
+  .sub-footer {
+	margin-top: 40px;
+  }
+}
+
+.page-404-thumb {
+  margin-bottom: 50px;
+}
+
+.page-not-found-content {
+  min-height: 100vh;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 799px) {
+
+}

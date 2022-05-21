@@ -1,0 +1,97 @@
+/*------------- #W-HELP --------------*/
+
+
+.w--help {
+  padding: 80px;
+  background-color: $primary-color;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .title {
+    font-weight: 400;
+    color: #15171c;
+  }
+
+  .text {
+	color: $white-color;
+    font-weight: 700;
+  }
+}
+
+.bg-help {
+  background-image: url("../img/bg-help.png");
+}
+
+.w--location {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.sidebar {
+  .widget {
+    padding: 80px;
+    border-radius: 30px;
+    margin-bottom: 80px;
+    background-color: $black-light;
+
+    .primary-dots {
+      margin-bottom: 5px;
+    }
+
+    &.w-subscribe {
+      background-color: $primary-color;
+    }
+
+    &.w-search {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+}
+
+.widget-title {
+  margin-bottom: 50px;
+
+  &:after {
+    content: ".";
+    font-size: inherit;
+    color: $primary-color;
+    display: inline-block;
+    position: relative;
+  }
+}
+
+
+
+/*================= Responsive Mode ============*/
+
+
+@media (max-width: 1300px) {
+  .w--help {
+    padding: 40px;
+  }
+
+  .sidebar .widget {
+    padding: 40px;
+    margin-bottom: 40px;
+  }
+
+  .widget-title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sidebar {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar .widget {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+}

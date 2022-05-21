@@ -1,0 +1,40 @@
+/*------------- #W-UPCOMING-EVENTS --------------*/
+
+
+.w-upcoming-events {
+  text-align: center;
+
+  .crumina-event-item {
+	border-radius: 0;
+	padding: 0;
+
+	&:after {
+	  display: none;
+	}
+  }
+
+  .event-date {
+	display: inline-flex;
+  }
+
+  .author-content {
+	text-align: left;
+  }
+
+  .author-block {
+	display: inline-flex;
+
+	.avatar {
+	  margin-right: 20px;
+	}
+  }
+
+  .event-title {
+	line-height: 1;
+	margin: 30px 0;
+  }
+
+  .pagination-bottom-center {
+	padding-bottom: 80px;
+  }
+}

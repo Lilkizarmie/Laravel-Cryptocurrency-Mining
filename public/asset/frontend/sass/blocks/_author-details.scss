@@ -1,0 +1,62 @@
+/*------------- #AUTHOR DETAILS --------------*/
+
+
+.author-details {
+  position: relative;
+  overflow: hidden;
+
+  .avatar-details {
+	border-radius: 0;
+	float: left;
+	max-width: 50%;
+  }
+
+  .author-content {
+	padding: 100px;
+	overflow: hidden;
+	text-align: left;
+
+	.author-prof {
+
+	}
+
+	blockquote {
+	  margin: 0;
+
+	  p {
+		font-size: 24px;
+		margin-bottom: 0;
+	  }
+	}
+
+	.author-name {
+	  color: $heading-color;
+	}
+
+	.socials {
+	  margin-top: 50px;
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1300px) {
+  .author-details .author-content {
+	padding: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .author-details .avatar-details {
+	float: none;
+	margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .author-details .author-content blockquote p {
+	font-size: 18px;
+  }
+}

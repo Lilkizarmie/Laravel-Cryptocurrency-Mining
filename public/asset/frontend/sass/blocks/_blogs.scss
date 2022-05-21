@@ -1,0 +1,453 @@
+/*------------- #BLOGS --------------*/
+
+
+.post {
+  position: relative;
+  padding: 60px 0;
+  max-width: 100%;
+  transition: all .3s ease;
+
+  .post__date {
+	padding-bottom: 40px;
+	display: inline-block;
+
+	&:after {
+	  content: '';
+	  display: block;
+	  width: 100%;
+	  height: 4px;
+	  border-radius: 3px;
+	  background-color: $hr-color;
+	  transition: all .3s ease;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	}
+  }
+
+  &:hover {
+	.post__date:after {
+	  background-color: $primary-color;
+	}
+  }
+
+  &.sticky-post {
+
+	.post__content {
+	  width: 50%;
+	}
+
+	.post__date {
+	  padding-bottom: 0;
+
+	  &:after {
+		display: none;
+	  }
+	}
+
+	.post__text {
+	  font-size: 22px;
+	  color: $link-color;
+	}
+
+	.post-thumb {
+	  position: absolute;
+	  right: 0;
+	  top: 0;
+	  max-height: 100%;
+	  max-width: 80%;
+
+	  &:before {
+		content: '\f005';
+		font-size: 20px;
+		font-weight: 900;
+		font-family: 'Font Awesome 5 Free';
+		background-color: $primary-color;
+		background-size: 60%;
+		display: block;
+		text-align: center;
+		position: absolute;
+		z-index: 5;
+		top: 40px;
+		right: 40px;
+		height: 60px;
+		width: 60px;
+		line-height: 60px;
+		border-radius: 100%;
+		color: $white-color;
+		fill: $white-color;
+	  }
+	}
+  }
+}
+
+.post__content {
+  position: relative;
+  z-index: 1;
+}
+
+.post-thumb {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+
+  img {
+	display: block;
+	margin: 0 auto;
+  }
+
+  iframe {
+	width: 100%;
+  }
+}
+
+.post__title {
+  display: block;
+}
+
+a.post__title {
+  &:hover {
+	color: $primary-color;
+  }
+}
+
+.post__date {
+  position: relative;
+
+  .number {
+	font-size: 48px;
+	color: $primary-color;
+	display: block;
+	line-height: 1.1;
+  }
+
+  time {
+	font-size: 12px;
+	font-weight: 700;
+  }
+}
+
+/*------------- #VIDEO POST --------------*/
+
+
+.post.video {
+
+  .video-control {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+}
+
+.video-control {
+  .woox-icon {
+	fill: $white-color;
+	color: $white-color;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 30px;
+  }
+}
+
+.video-control-youtube {
+  padding: 15px 23px 14px 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $c-youtube;
+  display: block;
+  line-height: 1;
+
+  .woox-icon {
+	width: 30px;
+	height: 30px;
+	margin-bottom: 0;
+  }
+}
+
+
+/*------------- #Slider POST --------------*/
+
+.post.slider {
+
+  .post-thumb {
+	img {
+	  border-radius: 20px;
+	}
+  }
+
+  .pagination-bottom-center {
+	padding-bottom: 45px;
+  }
+}
+
+/*------------- #Link POST --------------*/
+
+.post.link {
+  padding: 40px;
+
+  .post-thumb {
+	padding: 0 50px;
+
+	&:before {
+	  content: 'http://';
+	  display: block;
+	  position: absolute;
+	  top: -15px;
+	  left: 0;
+	  font-size: 160px;
+	  line-height: 1;
+	  color: #1e2025;
+	  font-weight: 700;
+	  z-index: -1;
+	}
+  }
+
+  .site-link {
+	display: inline-block;
+	color: $primary-color;
+	font-size: 18px;
+	font-weight: 700;
+	text-decoration: underline;
+	margin-bottom: 35px;
+  }
+}
+
+
+/*------------- #Audio POST --------------*/
+
+.post.audio {
+  .post-thumb {
+	margin-bottom: 40px;
+  }
+}
+
+
+/*------------- #POST Standard Details --------------*/
+
+.post-details-wrap {
+  display: inline-flex;
+  align-items: center;
+
+  .post__date {
+	display: inline-flex;
+	align-items: center;
+	text-align: left;
+	color: $link-color;
+
+	.number {
+	  font-size: 40px;
+	  margin-right: 15px;
+	}
+
+	time {
+	  font-size: 16px;
+	  line-height: 1.2;
+
+	  span {
+		display: block;
+		color: $body-font-color;
+	  }
+	}
+
+	& + .author-block {
+	  margin-left: 60px;
+	}
+  }
+
+  .author-block {
+	text-align: left;
+
+	.avatar {
+	  margin-right: 20px;
+	}
+  }
+}
+
+.post-standard-details {
+  .post-additional-info {
+	float: left;
+  }
+
+  .post__content {
+	padding-left: 60px;
+	overflow: hidden;
+  }
+
+  blockquote {
+	padding: 80px;
+	font-weight: 400;
+	margin: 0;
+
+	&::before {
+	  top: 40px;
+	  left: 40px;
+	}
+
+	p {
+	  margin: 0 0 40px;
+	  font-size: 24px;
+	  line-height: 1.6em;
+	  z-index: 2;
+	}
+  }
+}
+
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1199px) {
+  .post {
+	text-align: center;
+
+	.row {
+	  & > * {
+		margin-bottom: 30px;
+
+		&:last-child {
+		  margin-bottom: 0;
+		}
+	  }
+	}
+  }
+
+  .post.sticky-post .post__content {
+	width: 100%;
+  }
+
+  .post.link .post-thumb {
+	padding: 0;
+  }
+
+  .post.sticky-post .post-thumb {
+	position: relative;
+	max-width: 100%;
+	margin-bottom: 30px;
+  }
+
+  .post.sticky-post .post-thumb::before {
+	top: 15px;
+	right: 15px;
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	font-size: 10px;
+  }
+
+  .post.post-standard-details {
+	text-align: left;
+	padding: 0;
+  }
+
+  .post.quote {
+	.author-block {
+	  display: inline-flex;
+	  text-align: center;
+	}
+
+	.author-block--column-start .avatar {
+	  margin: 0 auto 20px;
+	}
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .post__date .number {
+	font-size: 30px;
+  }
+
+  .post .post__date {
+	padding-bottom: 20px;
+  }
+
+  .post.sticky-post .post__text {
+	font-size: 18px;
+	color: #c3c9d4;
+  }
+
+  .post-details-wrap .post__date .number {
+	font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .post {
+	padding: 0;
+	margin-bottom: 30px;
+  }
+
+  .post .post-additional-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.btn + .btn {
+	  margin-left: 0;
+	}
+
+	& > * {
+	  margin-bottom: 20px;
+
+	  &:last-child {
+		margin-bottom: 0;
+	  }
+	}
+  }
+
+  .quote--post-type p {
+	font-size: 20px;
+  }
+
+  .quote--post-type p > .quote {
+	width: 40px;
+	height: 50px;
+	top: 0;
+	left: 0;
+	z-index: -1;
+  }
+
+  .quote--post-type p > .quote-close {
+	bottom: 0;
+	right: 0;
+	top: auto;
+	left: auto;
+  }
+
+  .quote--post-type {
+	padding: 10px 0;
+  }
+
+  .post-details-wrap .post__date + .author-block {
+	margin-left: 20px;
+  }
+
+  .post-standard-details .post__content {
+	padding-left: 20px;
+  }
+
+  .post-standard-details blockquote {
+	padding: 0;
+	margin: 20px 0;
+  }
+
+  .post-standard-details blockquote::before {
+	top: 0;
+	left: 0;
+  }
+
+  .post-standard-details blockquote p {
+	margin: 0 0 20px;
+	font-size: 18px;
+  }
+
+  .video-control-youtube {
+	padding: 15px 25px;
+
+	.woox-icon {
+	  width: 15px;
+	  height: 15px;
+	}
+  }
+}

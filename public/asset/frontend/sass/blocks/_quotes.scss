@@ -1,0 +1,290 @@
+/*------------- #QUOTES --------------*/
+
+
+blockquote {
+  .primary-dots {
+	display: block;
+  }
+}
+
+.quote--bg-dark {
+  background-color: $testimonial-bg;
+
+  p {
+	color: $link-color;
+  }
+}
+
+.primary-dots {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+}
+
+.quote-bg1 {
+  background-image: url("../img/quote-bg1.jpg");
+}
+
+.quote-bg2 {
+  background-image: url("../img/quote-bg2.jpg");
+}
+
+/*------------- #QUOTE Style2 --------------*/
+
+.quote--style2 {
+  padding: 100px 70px 55px;
+
+  p {
+	font-size: 26px;
+	margin-bottom: 50px;
+	line-height: 1.75em;
+  }
+
+  &:before {
+	top: 70px;
+	left: 30px;
+  }
+}
+
+/*------------- #QUOTE Style3 --------------*/
+
+.quote--style3 {
+  font-family: Comfortaa, Arial, "Helvetica Neue", Helvetica, serif, sans-serif;
+  font-style: normal;
+  padding: 60px 0;
+  border-radius: 0;
+
+  &:before {
+	display: none;
+  }
+
+  .primary-dots {
+	margin-bottom: 30px;
+  }
+
+  &.quote--with-bg {
+	padding: 60px;
+	border-radius: 20px;
+  }
+
+  p {
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-size: 22px;
+	letter-spacing: .01em;
+	color: $link-color;
+
+	&:first-letter {
+	  font-size: 30px;
+	}
+  }
+}
+
+/*------------- #QUOTE Style4 --------------*/
+
+.quote--style4 {
+  padding: 80px;
+
+  &:before {
+	display: none;
+  }
+
+  p {
+	font-size: 24px;
+
+	& > .quote {
+	  fill: $hr-color;
+	  width: 50px;
+	  height: 50px;
+	  position: absolute;
+	  top: -10px;
+	  left: -20px;
+	  z-index: -1;
+	}
+
+	& > .quote-close {
+	  top: auto;
+	  left: auto;
+	  bottom: -10px;
+	  right: -20px;
+	}
+  }
+
+  &.quote--with-bg {
+	p {
+	  color: $link-color;
+	}
+  }
+
+  &.quote--bg-photo {
+	p {
+	  color: $white-color;
+
+	  & > .quote {
+		fill: $primary-color;
+		width: 50px;
+		height: 50px;
+		top: -10px;
+		left: -20px;
+	  }
+
+	  & > .quote-close {
+		top: auto;
+		left: auto;
+		bottom: -10px;
+		right: -20px;
+	  }
+	}
+  }
+}
+
+/*------------- #QUOTE Style BG-Photo --------------*/
+
+.quote--bg-photo {
+  background-size: cover;
+  box-shadow: 60px 0 100px 5px rgba(22, 24, 29, .4);
+
+  p {
+	color: $white-color;
+	position: relative;
+
+	& > .quote {
+	  fill: $primary-color;
+	  width: 80px;
+	  height: 90px;
+	  position: absolute;
+	  top: -30px;
+	  left: -40px;
+	  z-index: -1;
+	}
+  }
+
+  &:before {
+	display: none;
+  }
+
+  .author-block {
+	z-index: 1;
+  }
+
+  .author-name {
+	color: $primary-color;
+  }
+}
+
+/*------------- #QUOTE Style Post Type --------------*/
+
+.quote--post-type {
+  padding: 10px 30px;
+  margin: 0;
+
+  &:before {
+	display: none;
+  }
+
+  p {
+	font-size: 40px;
+	color: $white-color;
+	font-weight: 400;
+	line-height: 1.2;
+
+	& > .quote {
+	  fill: $hr-color;
+	  width: 80px;
+	  height: 90px;
+	  position: absolute;
+	  top: -15px;
+	  left: -20px;
+	  z-index: -1;
+	}
+
+	& > .quote-close {
+	  top: auto;
+	  left: auto;
+	  bottom: -15px;
+	  right: -20px;
+	}
+  }
+}
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 1300px) {
+  .quote--style2 {
+	padding: 50px 35px 30px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  .quote--style2 {
+	padding: 30px 20px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  blockquote .author-block {
+	display: inline-flex;
+  }
+
+  .quote--style3 .primary-dots {
+	margin: 0 auto 30px;
+  }
+
+  .quote--style2 {
+	padding: 15px;
+  }
+
+  .quote--style4.quote--bg-photo p > .quote {
+	top: 0;
+	left: 0;
+  }
+
+  .quote--style4.quote--bg-photo p > .quote-close {
+	bottom: 0;
+	right: 0;
+	top: auto;
+	left: auto;
+  }
+
+  .quote--style4 {
+	padding: 20px;
+  }
+
+  .quote--style3.quote--with-bg {
+	padding: 20px;
+  }
+
+  .quote--style2 p {
+	font-size: 18px;
+	margin-bottom: 20px;
+  }
+
+  .quote--bg-photo p > .quote {
+	width: 40px;
+	height: 50px;
+	top: 0;
+	left: 0;
+  }
+
+  .quote--style2::before {
+	top: 30px;
+	left: 30px;
+  }
+
+  blockquote::before {
+	width: 40px;
+	height: 50px;
+	top: 30px;
+	left: 30px;
+  }
+
+  .quote--style4 p {
+	font-size: 18px;
+  }
+
+  .quote--style3 p {
+	font-size: 16px;
+  }
+}

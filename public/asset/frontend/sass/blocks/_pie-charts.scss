@@ -1,0 +1,108 @@
+/*------------- #PIE-CHARTS --------------*/
+
+
+
+.crumina-pie-chart {
+  text-align: center;
+}
+
+.pie-chart {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 100%;
+  border: 2px solid $chart-bg;
+  padding: 5px;
+  margin: 0 auto 30px;
+  color: $heading-color;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 164px;
+    height: 164px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border-radius: 100%;
+    border: 2px solid $chart-bg;
+    z-index: -1;
+  }
+
+  .content {
+    font-size: 41px;
+    font-weight: $h-font-weight;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    span {
+      color: inherit;
+    }
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  &.pie-cart--green {
+
+  }
+}
+
+.pie-chart canvas {max-width:100%}
+
+
+
+/*------------- #PIE-CHARTS SOLID --------------*/
+
+.pie-chart--solid {
+  .pie-chart {
+    border: none;
+	width: 176px;
+	height: 176px;
+	padding: 0;
+
+    &:after {
+      width: 100%;
+      height: 100%;
+      border: 8px solid $chart-bg;
+	  transform: none;
+	  top: 0;
+	  left: 0;
+    }
+  }
+
+  .content {
+    color: $primary-color;
+
+    span {
+      color: $border-color;
+    }
+  }
+}
+
+/*------------- #PIE-CHARTS LARGE --------------*/
+
+.pie-chart--large {
+  .pie-chart {
+    border: none;
+    padding: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}

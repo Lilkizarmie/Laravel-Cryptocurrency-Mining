@@ -1,0 +1,13 @@
+/*------------- #CLIENTS --------------*/
+
+
+.clients-item {
+  display: block;
+  text-align: center;
+  opacity: .5;
+  transition: all .3s ease;
+
+  &:hover {
+	opacity: 1;
+  }
+}

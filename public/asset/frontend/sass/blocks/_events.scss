@@ -1,0 +1,286 @@
+/*------------- #EVENTS --------------*/
+
+
+.crumina-event-item {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+
+  .event-thumb {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transition: all .3s ease;
+	z-index: -1;
+  }
+
+  &:hover {
+	.event-title {
+	  color: $primary-color;
+	}
+
+	&:after {
+	  opacity: 1;
+	}
+
+	.event-thumb {
+	  transform: scale(1.3);
+	}
+  }
+
+  &:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: $primary-color;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transition: all .3s ease;
+	opacity: 0;
+  }
+
+  img {
+	display: block;
+	transition: all 1s ease;
+  }
+
+  .overlay {
+	opacity: 1;
+	background: rgba(22, 24, 29, 0.7);
+  }
+
+  .event-title {
+	transition: all .3s ease;
+  }
+}
+
+.event-date {
+  font-size: 14px;
+  color: $link-color;
+  display: flex;
+
+  .woox-icon {
+	width: 16px;
+	height: 16px;
+	min-width: 16px;
+	min-height: 16px;
+	fill: $link-color;
+	margin-right: 15px;
+  }
+
+  & + .event-date {
+	margin-top: 15px;
+  }
+}
+
+.event-venue {
+  padding: 60px;
+  border-radius: 30px;
+  background-color: #15171c;
+  overflow: hidden;
+
+  .event-date {
+	color: $body-font-color;
+	line-height: 1.1;
+
+	.woox-icon {
+	  fill: $border-color;
+	}
+  }
+
+  .author-block {
+	margin-top: 35px;
+  }
+}
+
+.event-venue--details {
+  padding: 40px;
+
+  .author-block {
+	margin-top: 0;
+  }
+
+  .author-content {
+	font-size: 14px;
+  }
+
+  .author-block .avatar {
+	margin-right: 20px;
+  }
+
+  .event-date .woox-icon {
+	fill: $primary-color;
+  }
+}
+
+.event-item--content-column {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.coming-soon-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: $white-color;
+  border-radius: 15px;
+  padding: 7px 20px;
+  border-width: 3px;
+  background-color: $icon-color;
+  text-transform: uppercase;
+}
+
+.event-details-thumb {
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  justify-content: space-around;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .crumina-countdown-item {
+	margin: 90px 0 170px;
+  }
+}
+
+.countdown-btn-wrap {
+  display: flex;
+  align-items: flex-end;
+}
+
+.bg-event1 {
+  background-image: url("../img/event1.jpg");
+}
+
+.bg-event2 {
+  background-image: url("../img/event2.jpg");
+}
+
+.bg-event3 {
+  background-image: url("../img/event3.jpg");
+}
+
+.bg-event4 {
+  background-image: url("../img/event4.jpg");
+}
+
+.bg-event5 {
+  background-image: url("../img/event5.jpg");
+}
+
+.bg-event6 {
+  background-image: url("../img/event6.jpg");
+}
+
+.bg-event7 {
+  background-image: url("../img/event7.jpg");
+}
+
+.bg-event8 {
+  background-image: url("../img/event-details.jpg");
+}
+
+
+
+/*------------- #For Masonry --------------*/
+
+.grid-sizer {
+  width: 33.3333%;
+}
+
+.grid-sizer-half-width {
+  width: 50%;
+}
+
+.grid-sizer-full-width {
+  width: 100%;
+}
+
+.sorting-container {
+  .sorting-item {
+	margin-bottom: 40px;
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+
+@media (max-width: 1300px) {
+  .event-venue {
+	padding: 20px;
+  }
+
+  .event-details-thumb {
+	padding: 40px;
+  }
+
+  .event-details-thumb .crumina-countdown-item {
+	margin: 50px 0 100px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .grid-sizer {
+	width: 50%;
+  }
+
+  .crumina-event-item {
+	padding: 20px;
+  }
+
+  .event-venue {
+	.row {
+	  & > * {
+		margin-bottom: 20px;
+	  }
+	}
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .event-details-thumb .crumina-countdown-item {
+	margin: 40px 0;
+  }
+
+  .crumina-event-item {
+	flex-direction: column;
+	align-items: flex-start;
+
+	& > * + * {
+	  margin-top: 30px;
+	}
+  }
+}
+
+@media (max-width: 768px) {
+  .countdown-btn-wrap {
+	display: block;
+
+	.crumina-countdown-item {
+	  text-align: left;
+	}
+
+	.crumina-countdown-item + .btn {
+	  margin-left: 0;
+	}
+  }
+
+  .event-details-thumb {
+	padding: 20px;
+  }
+}

@@ -1,0 +1,24 @@
+/*------------- #CHART STATISTICS --------------*/
+
+
+
+.js-chart-statistic {
+  margin: 60px 0;
+}
+
+.highcharts-button-box {
+  fill: transparent;
+}
+
+.highcharts-button.highcharts-button-pressed .highcharts-button-box {
+  fill: $primary-color;
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 768px) {
+  .js-chart-statistic {
+    margin: 30px 0;
+  }
+}

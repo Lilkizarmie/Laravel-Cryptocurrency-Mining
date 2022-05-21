@@ -1,0 +1,83 @@
+/*------------- #LESSONS --------------*/
+
+
+.lessons__list {
+  padding-left: 0;
+  list-style: none;
+  margin: 10px 0;
+}
+
+.lessons__item {
+  margin-bottom: 30px;
+
+  .author-name {
+	font-size: 16px;
+  }
+
+  .lessons-title {
+	margin-bottom: 30px;
+	display: block;
+
+	&:hover {
+	  color: $primary-color;
+	}
+  }
+
+  .lessons-text {
+	margin-bottom: 50px;
+  }
+
+  .lessons__time {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	margin-bottom: 30px;
+
+	.woox-icon {
+	  width: 20px;
+	  height: 20px;
+	  margin-right: 20px;
+	  fill: $primary-color;
+	}
+  }
+}
+
+.lessons__body {
+  padding: 10px 0 30px 70px;
+  border-left: 2px solid $hr-color;
+  margin-left: 8px;
+}
+
+.lessons-content {
+  padding-bottom: 60px;
+  border-bottom: 1px solid $hr-color;
+}
+
+
+
+/*================= Responsive Mode ============*/
+
+
+@media (max-width: 1300px) {
+  .lessons__body {
+	padding: 10px 0 30px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lessons__item .lessons__time {
+	margin-bottom: 15px;
+  }
+
+  .lessons__item .lessons-text {
+	margin-bottom: 20px;
+  }
+
+  .lessons-content {
+	padding-bottom: 30px;
+  }
+
+  .tabs ul li.lessons__item {
+	margin-bottom: 20px;
+  }
+}

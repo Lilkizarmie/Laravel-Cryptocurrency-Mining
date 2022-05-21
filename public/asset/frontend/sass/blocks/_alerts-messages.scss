@@ -1,0 +1,466 @@
+/*------------- #ALERT MESSAGES --------------*/
+
+
+.alert {
+  border-radius: 10px;
+  border: none;
+  margin: 30px 0;
+  padding: 10px 20px;
+  background-color: $alert-grey;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  strong {
+	margin-right: 3px;
+  }
+
+  .alert-icon {
+    min-width: 40px;
+    min-height: 40px;
+	max-width: 40px;
+	max-height: 40px;
+    line-height: 40px;
+    border: 3px solid;
+	border-radius: 100%;
+	text-align: center;
+	margin-right: 20px;
+
+    .woox-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .icon-close {
+	margin-left: auto;
+
+	.woox-icon {
+	  width: 12px;
+	  height: 12px;
+	  fill: $icon-color;
+	}
+  }
+}
+
+.alert-heading {
+  color: inherit;
+}
+
+.alert-link {
+  font-weight: bold;
+}
+
+.alert-dismissible .close {
+  position: relative;
+  top: -0.75rem;
+  right: -1.25rem;
+  padding: 0.75rem 1.25rem;
+  color: inherit;
+}
+
+.alert-notice {
+
+  strong {
+	color: $link-color;
+  }
+
+  .alert-icon {
+	border-color: $alert-close-color;
+
+	.woox-icon {
+	  fill: $icon-color;
+	}
+  }
+}
+
+.alert-success {
+
+  strong {
+	color: $green-lighter;
+  }
+
+  .alert-icon {
+	border-color: $green-lighter;
+
+	.woox-icon {
+	  fill: $green-lighter;
+	}
+  }
+}
+
+.alert-info {
+  strong {
+	color: $blue-light;
+  }
+
+  .alert-icon {
+	border-color: $blue-light;
+
+	.woox-icon {
+	  fill: $blue-light;
+	}
+  }
+}
+
+.alert-warning {
+  strong {
+	color: $primary-color;
+  }
+
+  .alert-icon {
+	border-color: $primary-color;
+
+	.woox-icon {
+	  fill: $primary-color;
+	}
+  }
+}
+
+.alert-danger {
+  strong {
+	color: $red-light;
+  }
+
+  .alert-icon {
+	border-color: $red-light;
+
+	.woox-icon {
+	  fill: $red-light;
+	}
+  }
+}
+
+
+/*------------- #ALERT Bordered --------------*/
+
+.alert--bordered {
+  background-color: transparent;
+  border: 3px solid;
+  padding: 7px 20px;
+
+  .alert-icon {
+	border-color: transparent;
+	background-color: $alert-grey;
+  }
+
+  &.alert-notice {
+	border-color: $border-color;
+
+	.alert-icon {
+
+	  .woox-icon {
+		fill: $border-color;
+	  }
+	}
+  }
+
+  &.alert-danger {
+	border-color: $red-light;
+
+	.alert-icon {
+
+	  .woox-icon {
+		fill: $red-light;
+	  }
+	}
+  }
+
+  &.alert-warning {
+	border-color: $primary-color;
+
+	.alert-icon {
+
+	  .woox-icon {
+		fill: $primary-color;
+	  }
+	}
+  }
+
+  &.alert-success {
+	border-color: $green-lighter;
+
+	.alert-icon {
+
+	  .woox-icon {
+		fill: $green-lighter;
+	  }
+	}
+  }
+
+  &.alert-info {
+	border-color: $blue-light;
+
+	.alert-icon {
+
+	  .woox-icon {
+		fill: $blue-light;
+	  }
+	}
+  }
+}
+
+
+/*------------- #ALERT With BG --------------*/
+
+.alert--with-bg {
+  box-shadow: none;
+
+  .alert-icon {
+	border-color: transparent;
+	background-color: $alert-grey;
+
+	.woox-icon {
+	  fill: $white-color;
+	}
+  }
+
+  .icon-close .woox-icon {
+	fill: $white-color;
+  }
+
+  &.alert-notice {
+	background-color: $alert-grey;
+
+	.alert-icon {
+	  background-color: $alert-close-color;
+	}
+
+	.icon-close .woox-icon {
+	  fill: $alert-close-color;
+	}
+  }
+
+  &.alert-danger {
+	background-color: $red-light;
+	color: $white-color;
+
+	strong {
+	  color: $white-color;
+	}
+  }
+
+  &.alert-warning {
+	background-color: $primary-color;
+	color: $alert-grey;
+
+	strong {
+	  color: $alert-grey;
+	}
+  }
+
+  &.alert-success {
+	background-color: $green-lighter;
+	color: $white-color;
+
+	strong {
+	  color: $white-color;
+	}
+  }
+
+  &.alert-info {
+	background-color: $blue-light;
+	color: $white-color;
+
+	strong {
+	  color: $white-color;
+	}
+  }
+}
+
+
+/*------------- #ALERT Small --------------*/
+
+
+.alert--small {
+  padding: 0 20px 0 0;
+  font-size: 14px;
+
+  .alert-icon {
+	border-color: transparent;
+	border-radius: 10px;
+
+	.woox-icon {
+	  fill: $white-color;
+	}
+  }
+
+  .icon-close .woox-icon {
+	width: 8px;
+	height: 8px;
+  }
+
+  &.alert-notice {
+
+	.alert-icon {
+	  background-color: $border-color;
+	}
+  }
+
+  &.alert-danger {
+
+	.alert-icon {
+	  background-color: $red-light;
+	}
+  }
+
+  &.alert-warning {
+
+	.alert-icon {
+	  background-color: $primary-color;
+	}
+  }
+
+  &.alert-success {
+
+	.alert-icon {
+	  background-color: $primary-color;
+	}
+  }
+
+  &.alert-info {
+
+	.alert-icon {
+	  background-color: $blue-light;
+	}
+  }
+}
+
+
+
+/*------------- #ALERT Large --------------*/
+
+.alert--large {
+  padding: 60px;
+
+  strong {
+	display: block;
+	font-size: 22px;
+  }
+
+  .alert-icon {
+	min-width: 80px;
+	min-height: 80px;
+	max-width: 80px;
+	max-height: 80px;
+	line-height: 90px;
+	margin-right: 40px;
+	box-shadow: 6px 0 13px 0 rgba(61,67,79,.08);
+	border-color: transparent;
+
+	.woox-icon {
+	  fill: $white-color;
+	  width: 28px;
+	  height: 28px;
+	}
+  }
+
+  .alert-content {
+	font-size: 14px;
+  }
+
+  .icon-close {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+  }
+
+  &.alert-notice {
+	strong {
+	  color: $link-color;
+	}
+
+	.alert-icon {
+	  background-color: $border-color;
+	}
+  }
+
+  &.alert-danger {
+
+	.alert-icon {
+	  background-color: $red-light;
+	}
+  }
+
+  &.alert-warning {
+
+	.alert-icon {
+	  background-color: $primary-color;
+	}
+  }
+
+  &.alert-success {
+
+	.alert-icon {
+	  background-color: $green-lighter;
+	}
+  }
+
+  &.alert-info {
+
+	.alert-icon {
+	  background-color: $blue-light;
+	}
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+
+@media (max-width: 1024px) {
+
+  .alert--large .icon-close {
+	top: 20px;
+	right: 20px;
+  }
+
+  .alert--large {
+	padding: 20px;
+  }
+
+  .alert--large .alert-icon {
+	min-width: 60px;
+	min-height: 60px;
+	max-width: 60px;
+	max-height: 60px;
+	line-height: 65px;
+	margin-right: 20px;
+  }
+
+  .alert--large .alert-icon .woox-icon {
+	width: 20px;
+	height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .alert {
+	flex-direction: column;
+	text-align: center;
+  }
+
+  .alert .icon-close {
+	margin: auto;
+	margin-top: 15px;
+  }
+
+  .alert .alert-icon {
+	margin-right: 0;
+	margin-bottom: 20px;
+  }
+
+  .alert--large .alert-icon {
+	margin-right: 0;
+	margin-bottom: 20px;
+  }
+
+  .alert--small {
+	padding: 10px;
+  }
+
+  .alert strong {
+	margin-right: 0;
+	margin-bottom: 3px;
+  }
+}

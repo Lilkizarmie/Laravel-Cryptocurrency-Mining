@@ -1,0 +1,59 @@
+/*------------- #W-TAGS --------------*/
+
+
+.w--tags {
+  list-style: none;
+  padding-left: 0;
+
+  .title {
+	float: left;
+	font-size: 16px;
+  }
+
+  .tags-list {
+	overflow: hidden;
+	padding-left: 80px;
+  }
+
+  li {
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-weight: 700;
+
+	&:last-child {
+	  margin-right: 0;
+	}
+
+	&:hover {
+
+	  .tag-item {
+		color: $primary-color;
+		border-color: $primary-color;
+	  }
+
+	}
+  }
+
+  .tag-item {
+	display: block;
+	font-size: 14px;
+	padding: 5px 23px;
+	border-radius: 30px;
+	border: 3px solid $hr-color;
+	color: $icon-color;
+	line-height: 1;
+  }
+}
+
+
+
+
+/*================= Responsive Mode ============*/
+
+
+@media (max-width: 1024px) {
+  .w--tags .tags-list {
+	padding-left: 20px;
+  }
+}

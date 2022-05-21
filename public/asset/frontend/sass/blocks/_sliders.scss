@@ -1,0 +1,409 @@
+/*------------- #SLIDERS --------------*/
+
+
+
+.crumina-module-slider {
+  position: relative;
+}
+
+.slides-item {
+  position: relative;
+}
+
+.slider-item--equal-height {
+  .swiper-slide {
+	height: auto;
+  }
+}
+
+.swiper-btn-wrap {
+  z-index: 19;
+
+  .swiper-btn-prev + .swiper-btn-next,
+  .btn-prev + .btn-next {
+	margin-left: 15px;
+  }
+
+  &.arrow-small {
+	.swiper-btn-next,
+	.swiper-btn-prev {
+
+	  .woox-icon {
+		width: 17px;
+		height: 17px;
+	  }
+	}
+  }
+}
+
+.swiper-btn-next,
+.swiper-btn-prev,
+.btn-next,
+.btn-prev {
+  z-index: 99;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  .woox-icon {
+	width: 33px;
+	height: 33px;
+	fill: $alert-close-color;
+	transition: all .3s ease;
+	display: block;
+  }
+
+  &:hover {
+	.woox-icon {
+	  fill: $primary-color;
+	}
+  }
+
+  &.btn--round {
+	border: 3px solid transparent;
+
+	.woox-icon {
+	  height: 17px;
+	  width: 17px;
+	  color: $white-color;
+	  fill: $white-color;
+	}
+
+	&:hover {
+	  border-color: $secondary-color;
+	  box-shadow: inset 2px 3px 0 0 $primary-color, 2px 3px 0 0 $primary-color;
+	}
+  }
+}
+
+.navigation-center-both-sides {
+  .swiper-btn-next, .swiper-btn-prev {
+	top: 50%;
+	transform: translate(0, -50%);
+	position: absolute;
+  }
+
+  .swiper-btn-prev {
+	left: 5%;
+  }
+
+  .swiper-btn-next {
+	right: 5%;
+  }
+}
+
+.navigation-bottom-right {
+  .swiper-btn-wrap {
+	position: absolute;
+	bottom: 30px;
+	right: 80px;
+  }
+}
+
+.navigation-bottom-left {
+  .swiper-btn-wrap {
+	position: absolute;
+	bottom: 30px;
+	left: 80px;
+  }
+}
+
+.navigation-bottom-both-sides {
+  .swiper-btn-next, .swiper-btn-prev {
+	bottom: 30px;
+	position: absolute;
+  }
+
+  .swiper-btn-prev {
+	left: 20%;
+  }
+
+  .swiper-btn-next {
+	right: 20%;
+  }
+}
+
+.slider-events {
+  .crumina-event-item {
+	padding: 120px;
+  }
+}
+
+
+/*------------- #Swiper Pagination --------------*/
+
+.swiper-pagination {
+  width: 100%;
+}
+
+
+.pagination-bottom {
+  padding-bottom: 100px;
+
+  .swiper-pagination {
+	bottom: 0;
+  }
+}
+
+.pagination-bottom-center {
+  padding-bottom: 100px;
+
+  .swiper-pagination {
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+  }
+}
+
+.pagination-top-center {
+  padding-top: 100px;
+
+  .swiper-pagination {
+	top: 10px;
+	bottom: auto;
+	left: 50%;
+	transform: translate(-50%, 0);
+  }
+}
+
+.swiper-pagination-bullets {
+
+  .swiper-pagination-bullet {
+	width: 80px;
+	height: 4px;
+	opacity: 1;
+	background-color: $hr-color;
+	border-radius: 3px;
+
+	& + .swiper-pagination-bullet {
+	  margin-left: 40px;
+	}
+  }
+
+  .swiper-pagination-bullet-active {
+	background-color: $primary-color;
+	position: relative;
+  }
+}
+
+.swiper-pagination--small {
+  &.swiper-pagination-bullets {
+
+	.swiper-pagination-bullet {
+	  width: 40px;
+
+	  & + .swiper-pagination-bullet {
+		margin-left: 20px;
+	  }
+	}
+  }
+}
+
+.swiper-pagination-fraction {
+  font-size: 22px;
+  color: $primary-color;
+}
+
+.swiper-pagination-current {
+  color: $heading-color;
+}
+
+
+/*------------- #Slider Info-boxes --------------*/
+
+.crumina-slider--info-boxes {
+  position: relative;
+  padding: 80px 180px 100px 80px;
+  background-color: $testimonial-bg;
+  border-radius: 20px;
+  background-image: url("../img/graph.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  .swiper-btn-wrap {
+	position: absolute;
+	right: 120px;
+	top: 50%;
+	transform: translate(0, -50%);
+  }
+
+  .swiper-btn-next,
+  .swiper-btn-prev {
+	display: block;
+  }
+}
+
+
+/*------------- #Slider Info-boxes Style 3 --------------*/
+
+.crumina-slider--testimonial-style3 {
+
+  .swiper-slide {
+	padding: 0 30px;
+	opacity: 0 !important;
+
+	&.swiper-slide-active {
+	  opacity: 1 !important;
+	}
+  }
+
+  .slider-slides {
+	z-index: 999;
+	position: relative;
+	align-items: center;
+	margin: 20px 0;
+	text-align: center;
+  }
+
+  .slides-item {
+	display: inline-block;
+	position: relative;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	transition: all .3s ease;
+	border-radius: 100%;
+	cursor: pointer;
+	overflow: hidden;
+	margin-right: 10px;
+	opacity: .3;
+
+	&:last-child {
+	  margin-right: 0;
+	}
+
+	&.swiper-slide-active {
+	  transform: scale(1.3);
+	  opacity: 1;
+	  border: 4px solid $primary-color;
+	  z-index: 20;
+	}
+  }
+}
+
+.crumina-slider--testimonial-style4 {
+
+  .swiper-wrapper {
+	width: 100%;
+	max-width: 100%;
+  }
+
+  .swiper-slide {
+	width: 1400px;
+	max-width: calc(100% - 40px);
+	opacity: .3;
+
+	.crumina-testimonial-item {
+	  display: inline-block;
+	  max-width: 48%;
+
+	  & + .crumina-testimonial-item {
+		margin-left: 20px;
+	  }
+	}
+
+	&.swiper-slide-active {
+	  opacity: 1;
+	}
+  }
+}
+
+
+/*------------- #Clients SLIDER --------------*/
+
+.clients--slider {
+  padding: 0 50px;
+
+  .swiper-btn-next {
+	right: 0;
+  }
+
+  .swiper-btn-prev {
+	left: 0;
+  }
+
+  .swiper-wrapper {
+	align-items: center;
+  }
+}
+
+
+/*------------- Responsive Mode --------------*/
+
+
+@media (max-width: 1300px) {
+  .crumina-slider--info-boxes {
+	position: relative;
+	padding: 40px 80px 50px 40px;
+  }
+
+  .crumina-slider--info-boxes .swiper-btn-wrap {
+	right: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .slider-events .crumina-event-item {
+	padding: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navigation-bottom-right .swiper-btn-wrap {
+	right: auto;
+	left: 10px;
+	bottom: 20px;
+  }
+
+  .pagination-bottom,
+  .pagination-bottom-center {
+	padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-events .crumina-event-item {
+	padding: 20px;
+  }
+
+  .swiper-pagination-bullets .swiper-pagination-bullet {
+	width: 40px;
+  }
+
+  .crumina-slider--testimonial-style4 .swiper-slide .crumina-testimonial-item {
+	max-width: none;
+	width: 100%;
+  }
+
+  .crumina-slider--testimonial-style4 .swiper-slide .crumina-testimonial-item + .crumina-testimonial-item {
+	margin-left: 0;
+	margin-top: 20px;
+  }
+
+  .crumina-slider--testimonial-style3 .slides-item {
+	width: 40px;
+	height: 40px;
+  }
+
+  .navigation-bottom-both-sides .swiper-btn-next {
+	right: 10%;
+  }
+
+  .navigation-bottom-both-sides .swiper-btn-prev {
+	left: 10%;
+  }
+
+  .crumina-slider--testimonial-style3 .slides-item {
+	width: 30px;
+	height: 30px;
+  }
+
+  .crumina-slider--testimonial-style3 .swiper-slide {
+	padding: 0;
+  }
+
+  .crumina-slider--testimonial-style3 .slides-item.swiper-slide-active {
+	border-width: 2px;
+  }
+}

@@ -1,0 +1,201 @@
+/*------------- #HEADING --------------*/
+
+
+.crumina-heading {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 30px;
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & + * {
+    margin-top: 25px;
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+
+  .heading-sup-title {
+    letter-spacing: 5px;
+  }
+
+  &.heading--with-decoration {
+    .heading-title {
+      &:after {
+        content: ".";
+        font-size: inherit;
+        color: $primary-color;
+        width: 0;
+        display: inline-block;
+        position: relative;
+      }
+    }
+  }
+
+  &.heading--h1 {
+	.heading-text {
+	  font-size: 1.875em;
+      line-height: 1.5;
+	  margin-top: 0;
+	}
+
+    .heading-sup-title {
+      font-size: 1.875em;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+  }
+
+  &.heading--h2 {
+    .heading-text {
+      font-size: 1.375em;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    .heading-sup-title {
+      font-size: 1.375em;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+  }
+
+  &.heading--h3 {
+    .heading-text {
+      font-size: 1.125em;
+      line-height: 1.6;
+      margin-top: 5px;
+    }
+
+    .heading-sup-title {
+      font-size: 1.125em;
+      line-height: 1.6;
+      margin-bottom: 5px;
+    }
+  }
+
+  &.heading--h4 {
+    .heading-text {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-top: 13px;
+    }
+
+    .heading-sup-title {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 13px;
+    }
+  }
+
+  &.heading--h5 {
+    .heading-text {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    .heading-sup-title {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+
+  &.heading--h6 {
+    .heading-text {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-top: 25px;
+    }
+
+    .heading-sup-title {
+      font-size: 1em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.heading-sup-title {
+  margin-bottom: 25px;
+  color: $primary-color;
+  font-size: $body-font-size;
+}
+
+.heading-title {
+  display: inline-block;
+  line-height: 1.3em;
+  position: relative;
+}
+
+.heading-text {
+  margin-top: 20px;
+  color: $link-color;
+}
+
+.primary-dots {
+  & + .heading-title {
+    display: block;
+  }
+}
+
+
+/**
+ * Diagonally colored text, with fallback
+ * Inspired from http://servicedesigndays.com/
+ */
+
+.heading--half-colored {
+  display: inline-block;
+}
+
+@supports (-webkit-background-clip: text) {
+  .heading--half-colored {
+    color: transparent;
+    background: linear-gradient(315deg, $heading-color 50%, $primary-color 100%);
+    -webkit-background-clip: text;
+  }
+}
+
+
+.c-white {
+  @supports (-webkit-background-clip: text) {
+    .heading--half-colored {
+      color: transparent;
+      background: linear-gradient(315deg, $white-color 50%, $primary-color 100%);
+      -webkit-background-clip: text;
+    }
+  }
+}
+
+
+/*================= Responsive Mode ============*/
+
+@media (max-width: 980px) {
+  .crumina-heading[class*="heading--h"] .heading-text {
+    font-size: 20px;
+  }
+
+  .crumina-heading[class*="heading--h"] .heading-sup-title {
+	font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 570px) {
+  .crumina-heading[class*="heading--h"] .heading-text {
+    font-size: 14px;
+  }
+
+  .crumina-heading[class*="heading--h"] .heading-sup-title {
+    font-size: 12px;
+  }
+}
